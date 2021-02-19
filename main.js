@@ -5,11 +5,16 @@ const textarea = document.querySelector('textarea')
 const content = localStorage.getItem('content')
 content && (textarea.value = content)
 
-let caretPos = +localStorage.getItem('caretPos')
-Number.isNaN(caretPos) && (caretPos = 0)
+const setCaretPos = () => {
+  let caretPos = +localStorage.getItem('caretPos')
+  Number.isNaN(caretPos) && (caretPos = 0)
 
-textarea.setSelectionRange(caretPos, caretPos)
-textarea.focus()
+  textarea.setSelectionRange(caretPos, caretPos)
+  textarea.focus()
+}
+
+setCaretPos()
+onfocus = setCaretPos
 
 const storeCaretPos = () =>
   requestAnimationFrame(() =>
