@@ -1,0 +1,8 @@
+{
+  "arrowParens": "avoid",
+  "endOfLine": "auto",
+  "htmlWhitespaceSensitivity": "ignore",
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all"
+}
