@@ -1,4 +1,4 @@
-# Pure Grammarly Editor
+# Clean Grammarly Editor
 
 _Please make sure to install [Grammarly for Chrome](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen) first._
 
