@@ -12,8 +12,8 @@ When multiple editors are opened, their content and caret position are automatic
 
 [Live link](https://wenfangdu.github.io/grammarly-editor/) _(please make sure you have [Grammarly for Chrome](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen) installed)_
 
-Screenshot:
+## Preview
 
-![Screenshot](screenshot.png)
+![Preview](preview.png)
 
 If you like this editor, a 🌟 will be very appreciated 😊.
