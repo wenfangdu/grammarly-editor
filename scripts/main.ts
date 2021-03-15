@@ -1,4 +1,5 @@
-const textarea = document.querySelector('textarea');
+const textarea = document.querySelector('textarea')
+
 const demoDoc = `The basics
 Mispellings and grammatical errors can effect your credibility. The same goes for misused commas, and other types of punctuation . Not only will Grammarly underline these issues in red, it will also showed you how to correctly write the sentence.
 But wait...there's more?
@@ -10,31 +11,44 @@ And when you wanna refine ur slang use and formality level, look for purple unde
 So what's next?
 Just follow these two steps:
 Sign up for a Grammarly account by clicking the "Sign Up" button at the bottom of this screen.
-Start writing!`;
+Start writing!`
+
 const restoreContent = () => {
-    const content = localStorage.getItem('content');
-    textarea.value = content !== null && content !== void 0 ? content : demoDoc;
-};
+  const content = localStorage.getItem('content')
+  textarea.value = content ?? demoDoc
+}
+
 const restoreCaretPos = () => {
-    let caretPos = +localStorage.getItem('caretPos');
-    Number.isNaN(caretPos) && (caretPos = 0);
-    textarea.setSelectionRange(caretPos, caretPos);
-    textarea.focus();
-};
+  let caretPos = +localStorage.getItem('caretPos')
+  Number.isNaN(caretPos) && (caretPos = 0)
+
+  textarea.setSelectionRange(caretPos, caretPos)
+  textarea.focus()
+}
+
 const handleFocus = () => {
-    restoreContent();
-    restoreCaretPos();
-};
-handleFocus();
-onfocus = handleFocus;
-const saveCaretPos = () => requestAnimationFrame(() => localStorage.setItem('caretPos', String(textarea.selectionStart)));
+  restoreContent()
+  restoreCaretPos()
+}
+
+handleFocus()
+
+onfocus = handleFocus
+
+const saveCaretPos = () =>
+  requestAnimationFrame(() =>
+    localStorage.setItem('caretPos', String(textarea.selectionStart)),
+  )
+
 textarea.oninput = () => {
-    localStorage.setItem('content', textarea.value);
-    saveCaretPos();
-};
-textarea.onclick = textarea.oncontextmenu = saveCaretPos;
+  localStorage.setItem('content', textarea.value)
+  saveCaretPos()
+}
+
+textarea.onclick = textarea.oncontextmenu = saveCaretPos
+
 textarea.onkeyup = ({ key }) => {
-    if (['Arrow', 'Page', 'Home', 'End'].some(type => key.startsWith(type))) {
-        saveCaretPos();
-    }
-};
+  if (['Arrow', 'Page', 'Home', 'End'].some(type => key.startsWith(type))) {
+    saveCaretPos()
+  }
+}
