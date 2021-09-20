@@ -1,0 +1,39 @@
+html {
+  height: 100%;
+}
+body {
+  background: #000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+h1,
+textarea {
+  color: #eee;
+}
+textarea {
+  flex: 1;
+  width: 50%;
+  border: 1px solid #555;
+  border-radius: 6px;
+  outline: none;
+  margin-top: 20px;
+  padding: 15px 20px;
+  line-height: 1.5;
+  resize: none;
+  /* fix scrollbar's text cursor */
+  cursor: auto;
+}
+textarea::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+}
+textarea::-webkit-scrollbar-corner {
+  background: transparent;
+}

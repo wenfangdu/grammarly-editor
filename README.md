@@ -1,0 +1,1 @@
+# PGE (Pure Grammarly Editor)
