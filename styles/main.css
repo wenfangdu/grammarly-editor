@@ -12,6 +12,7 @@ body {
 h1,
 textarea {
   color: #eee;
+  font-family: sans-serif;
 }
 textarea {
   flex: 1;
